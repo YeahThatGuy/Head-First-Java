@@ -1,21 +1,21 @@
-package TwoDimensionalBoard;
+package TwoDimensionalBoardAlt;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class DotComBust {
+public class DotComBustAlt {
 
     public static void main(String[] args) {
 
         int numOfGuesses = 0;
         int numberOfDotComs = 3;
-        DotCom dot = new DotCom();
+        DotComAlt dot = new DotComAlt();
         ArrayList<String> locations = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
 
         while (numberOfDotComs > 0) {
-            dot = new DotCom();
+            dot = new DotComAlt();
             System.out.print("Name the DotCom: ");
             dot.setDotComName(sc.next());
 
@@ -56,9 +56,9 @@ public class DotComBust {
                 }
             }
 
-            String firstLocationV = GameHelper.intToString(firstLocationVInteger);
-            String secondLocationV = GameHelper.intToString(secondLocationVInteger);
-            String thirdLocationV = GameHelper.intToString(thirdLocationVInteger);
+            String firstLocationV = GameHelperAlt.intToString(firstLocationVInteger);
+            String secondLocationV = GameHelperAlt.intToString(secondLocationVInteger);
+            String thirdLocationV = GameHelperAlt.intToString(thirdLocationVInteger);
 
             //concatenate
             String firstLocation = firstLocationV + Integer.toString(firstLocationH);

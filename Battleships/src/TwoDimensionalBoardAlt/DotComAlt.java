@@ -1,14 +1,14 @@
-package TwoDimensionalBoard;
+package TwoDimensionalBoardAlt;
 
 import java.util.ArrayList;
 
-public class DotCom {
+public class DotComAlt {
 
     private ArrayList<String> locationCells;
     private int numOfHits = 0;
     private String name;
 
-    public DotCom() {
+    public DotComAlt() {
     }
 
     public void setDotComName (String name) {

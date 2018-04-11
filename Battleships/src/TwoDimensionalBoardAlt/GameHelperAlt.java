@@ -1,8 +1,8 @@
-package TwoDimensionalBoard;
+package TwoDimensionalBoardAlt;
 
-public class GameHelper {
+public class GameHelperAlt {
 
-    private GameHelper() {
+    private GameHelperAlt() {
 
     }
 
@@ -10,21 +10,21 @@ public class GameHelper {
         String convertedLocation;
         switch (userInput) {
             case 0:     convertedLocation = "A";
-                        break;
+                break;
             case 1:     convertedLocation = "B";
-                        break;
+                break;
             case 2:     convertedLocation = "C";
-                        break;
+                break;
             case 3:     convertedLocation = "D";
-                        break;
+                break;
             case 4:     convertedLocation = "E";
-                        break;
+                break;
             case 5:     convertedLocation = "F";
-                        break;
+                break;
             case 6:     convertedLocation = "G";
-                        break;
+                break;
             default:    convertedLocation = "Invalid range";
-                        break;
+                break;
         }
         return convertedLocation;
     }
