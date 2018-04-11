@@ -30,10 +30,10 @@
       <file leaf-file-name="DotComBustAlt.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TwoDimensionalBoardAlt/DotComBustAlt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="95" lean-forward="false" selection-start-line="1" selection-start-column="95" selection-end-line="1" selection-end-column="95" />
+            <state relative-caret-position="34">
+              <caret line="2" column="81" lean-forward="false" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
               <folding>
-                <element signature="e#0#4124#0" expanded="true" />
+                <element signature="e#0#6510#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -103,7 +103,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -387,7 +387,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="20" width="1346" height="728" extended-state="0" />
+    <frame x="10" y="20" width="1346" height="728" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -817,10 +817,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TwoDimensionalBoardAlt/DotComBustAlt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="95" lean-forward="false" selection-start-line="1" selection-start-column="95" selection-end-line="1" selection-end-column="95" />
+        <state relative-caret-position="34">
+          <caret line="2" column="81" lean-forward="false" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
           <folding>
-            <element signature="e#0#4124#0" expanded="true" />
+            <element signature="e#0#6510#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
