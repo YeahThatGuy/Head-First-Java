@@ -1,3 +1,5 @@
+//the difference between TwoDimensionalBoard.DotComBurst and this lies in the reduction of local variables
+//they've been replaced by 2x ArrayList, one for vertical coordinates, the other for horizontal
 package TwoDimensionalBoardAlt;
 
 import java.util.ArrayList;
@@ -11,6 +13,8 @@ public class DotComBustAlt {
         int numberOfDotComs = 3;
         DotComAlt dot = new DotComAlt();
         ArrayList<String> locations = new ArrayList<>();
+        ArrayList<Integer> locationsVertical = new ArrayList<>();
+        ArrayList<Integer> locationsHorizontal = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
 
@@ -19,56 +23,55 @@ public class DotComBustAlt {
             System.out.print("Name the DotCom: ");
             dot.setDotComName(sc.next());
 
-            int firstLocationVInteger = (int) (Math.random() * 7);
-            int firstLocationH = (int) (Math.random() * 7);
-            int secondLocationVInteger = 0;
-            int thirdLocationVInteger = 0;
-            int secondLocationH = 0;
-            int thirdLocationH = 0;
+            locationsVertical.add((int) (Math.random() * 7));
+            locationsHorizontal.add((int) (Math.random() * 7));
             int directionChoice;
-            if (((firstLocationVInteger >= 0) && (firstLocationVInteger <= 4)) && ((firstLocationH >= 0) && (firstLocationH <= 4))) {
+
+            if (((locationsVertical.get(0) >= 0) && (locationsVertical.get(0) <= 4)) && ((locationsHorizontal.get(0) >= 0) && (locationsHorizontal.get(0) <= 4))) {
                 // 0 for down, 1 for right
                 directionChoice = (int) (Math.random() * 2);
                 if (directionChoice == 0) {
-                    secondLocationVInteger = firstLocationVInteger + 1;
-                    thirdLocationVInteger = firstLocationVInteger + 2;
-                    secondLocationH = firstLocationH;
-                    thirdLocationH = firstLocationH;
+                    locationsVertical.add(locationsVertical.get(0) + 1);
+                    locationsVertical.add(locationsVertical.get(0) + 2);
+                    locationsHorizontal.add(locationsHorizontal.get(0));
+                    locationsHorizontal.add(locationsHorizontal.get(0));
                 } else {
-                    secondLocationH = firstLocationH + 1;
-                    thirdLocationH = firstLocationH + 2;
-                    secondLocationVInteger = firstLocationVInteger;
-                    thirdLocationVInteger = firstLocationVInteger;
+                    locationsHorizontal.add(locationsHorizontal.get(0) + 1);
+                    locationsHorizontal.add(locationsHorizontal.get(0) + 2);
+                    locationsVertical.add(locationsVertical.get(0));
+                    locationsVertical.add(locationsVertical.get(0));
                 }
             } else {
                 // 0 for up, 1 for left
                 directionChoice = (int) (Math.random() * 2);
                 if (directionChoice == 0) {
-                    secondLocationVInteger = firstLocationVInteger - 1;
-                    thirdLocationVInteger = firstLocationVInteger - 2;
-                    secondLocationH = firstLocationH;
-                    thirdLocationH = firstLocationH;
+                    locationsVertical.add(locationsVertical.get(0) - 1);
+                    locationsVertical.add(locationsVertical.get(0) - 2);
+                    locationsHorizontal.add(locationsHorizontal.get(0));
+                    locationsHorizontal.add(locationsHorizontal.get(0));
                 } else {
-                    secondLocationH = firstLocationH - 1;
-                    thirdLocationH = firstLocationH - 2;
-                    secondLocationVInteger = firstLocationVInteger;
-                    thirdLocationVInteger = firstLocationVInteger;
+                    locationsHorizontal.add(locationsHorizontal.get(0) - 1);
+                    locationsHorizontal.add(locationsHorizontal.get(0) - 2);
+                    locationsVertical.add(locationsVertical.get(0));
+                    locationsVertical.add(locationsVertical.get(0));
                 }
             }
 
-            String firstLocationV = GameHelperAlt.intToString(firstLocationVInteger);
-            String secondLocationV = GameHelperAlt.intToString(secondLocationVInteger);
-            String thirdLocationV = GameHelperAlt.intToString(thirdLocationVInteger);
+            String firstLocationV = GameHelperAlt.intToString(locationsVertical.get(0));
+            String secondLocationV = GameHelperAlt.intToString(locationsVertical.get(1));
+            String thirdLocationV = GameHelperAlt.intToString(locationsVertical.get(2));
 
             //concatenate
-            String firstLocation = firstLocationV + Integer.toString(firstLocationH);
-            String secondLocation = secondLocationV + Integer.toString(secondLocationH);
-            String thirdLocation = thirdLocationV + Integer.toString(thirdLocationH);
+            String firstLocation = firstLocationV + Integer.toString(locationsHorizontal.get(0));
+            String secondLocation = secondLocationV + Integer.toString(locationsHorizontal.get(1));
+            String thirdLocation = thirdLocationV + Integer.toString(locationsHorizontal.get(2));
 
             locations.add(firstLocation);
             locations.add(secondLocation);
             locations.add(thirdLocation);
             dot.setLocationCells(locations);
+            locationsVertical.clear();
+            locationsHorizontal.clear();
 
             boolean isAlive = true;
             while (isAlive) {
