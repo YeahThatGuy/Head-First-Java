@@ -121,7 +121,7 @@ public class DotComBustAlt {
 
             boolean isAlive = true;
             while (isAlive) {
-                System.out.print("Enter your guess: ");
+                System.out.print("Enter your guess (A0 to G6: ");
                 String userGuess = sc.next();
                 String result = dot.checkYourself(userGuess);
                 numOfGuesses++;
